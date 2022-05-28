@@ -26,34 +26,47 @@
   </style>
 </head>
 <body style="text-align: center;">
-  <div id="hitokotoDiv">
+  <div id="hitokotoDiv" onclick="initHitokoto()">
     <p id="hitokoto" style="font-size: 32px;"></p>
     <p id="hitokotoAuthor"></p>
   </div>
 </body>
   <script>
-    $.ajax({
-    type: 'GET',
-    url: 'https://v1.hitokoto.cn/?c=d&c=e&c=f&c=g&c=h&c=j',
-    dataType: 'json',
-    success (data) {
-      $('#hitokoto').html(data.hitokoto);
-      $('#hitokotoAuthor').html('——'+nvlStr(data.from_who)+'['+nvlStr(data.from)+']');
-    },
-    error (jqXHR, textStatus, errorThrown) {
-      // 错误信息处理
-      console.error(textStatus, errorThrown)
-      $('#hitokoto').html('得一玫瑰，弃满山野花');
-    }
-  })
+    $(function(){
+      // 页面加载时初始化一言
+      initHitokoto();
+    })
 
-
-  function nvlStr(str){
-    if(null == str || undefined == str || 'null' == str) {
-      return '';
-    }else{
-      return str;
+    /**
+     * 初始化一言
+     */
+    function initHitokoto(){
+      $.ajax({
+        type: 'GET',
+        url: 'https://v1.hitokoto.cn/?c=d&c=e&c=f&c=g&c=h&c=j',
+        dataType: 'json',
+        success (data) {
+          $('#hitokoto').html(data.hitokoto);
+          $('#hitokotoAuthor').html('——'+nvlStr(data.from_who)+'['+nvlStr(data.from)+']');
+        },
+        error (e) {
+          console.log(e)
+          $('#hitokoto').html('得一玫瑰，弃满山野花');
+        }
+      })
     }
-  }
+
+    /**
+     * 空字符判断
+     * @param str 原始字符串
+     * @returns {string|*} result
+     */
+    function nvlStr(str){
+      if(null == str || undefined == str || 'null' == str) {
+        return '';
+      }else{
+        return str;
+      }
+    }
   </script>
 </html>
