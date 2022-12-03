@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Win10自带OpenSSH的使用 | My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0、前言 昨天写了一篇文章，记录了使用Vs Code的Remote-SSH的插件连接远程Linux服务器的方法。后来觉得还是很麻烦，需要先装Vs Code其次又要装Remote-SSH插件。今天网上查了查，其中有一篇文章提到，微软官方在2018年4月份更新的Win10版本中加入了正式版的OpenSSH，并默认安装在Win10系统中。所以本篇文章就是为了记录怎么在Win10默认环境下，使用OpenS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win10自带OpenSSH的使用">
+<meta property="og:url" content="http://www.yanghuisen.cn/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="My Blog">
+<meta property="og:description" content="0、前言 昨天写了一篇文章，记录了使用Vs Code的Remote-SSH的插件连接远程Linux服务器的方法。后来觉得还是很麻烦，需要先装Vs Code其次又要装Remote-SSH插件。今天网上查了查，其中有一篇文章提到，微软官方在2018年4月份更新的Win10版本中加入了正式版的OpenSSH，并默认安装在Win10系统中。所以本篇文章就是为了记录怎么在Win10默认环境下，使用OpenS">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f23ca096223c44539068687d924633ad.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/c93ddc96d8c54ca9b1b40b29255c27cd.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a5a06765cff546998b2baf12a7bc9209.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/518c260d57f24f6c848a177cc9d4d969.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/07c1b521310f441dac2e82cd54ad6496.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/55c04baaf37a4763b10ce79e6d501c71.png?pic_center">
+<meta property="article:published_time" content="2021-12-25T07:46:26.000Z">
+<meta property="article:modified_time" content="2022-12-03T16:44:34.148Z">
+<meta property="article:author" content="啥也不会的程序员">
+<meta property="article:tag" content="SSH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/f23ca096223c44539068687d924633ad.png?pic_center">
+  
+    <link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">[object Object]</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/%20%7C%7C%20fas%20fa-home">主页</a>
+        
+          <a class="main-nav-link" href="/archives/%20%7C%7C%20fas%20fa-archive">归档</a>
+        
+          <a class="main-nav-link" href="/tags/%20%7C%7C%20fas%20fa-tags">标签</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.yanghuisen.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Win10自带OpenSSH的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2021-12-25T07:46:26.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Win10自带OpenSSH的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0、前言"><a href="#0、前言" class="headerlink" title="0、前言"></a>0、前言</h2><blockquote>
+<p>昨天写了一篇文章，记录了使用Vs Code的Remote-SSH的插件连接远程Linux服务器的方法。后来觉得还是很麻烦，需要先装Vs Code其次又要装Remote-SSH插件。今天网上查了查，其中有一篇文章提到，微软官方在2018年4月份更新的Win10版本中加入了正式版的OpenSSH，并默认安装在Win10系统中。所以本篇文章就是为了记录怎么在Win10默认环境下，使用OpenSSH远程连接Linux服务器。</p>
+</blockquote>
+<p><strong>系统环境：</strong></p>
+<ul>
+<li>操作系统：Windows 10 21H1</li>
+<li>服务器：Centos 7 64Bit</li>
+</ul>
+<h2 id="1、检查是否安装有OpenSSH"><a href="#1、检查是否安装有OpenSSH" class="headerlink" title="1、检查是否安装有OpenSSH"></a>1、检查是否安装有OpenSSH</h2><ol>
+<li><p>打开系统的设置页面，可以使用快捷键Win+I打开。</p>
+</li>
+<li><p>应用—可选功能</p>
+<ul>
+<li><img src="https://img-blog.csdnimg.cn/f23ca096223c44539068687d924633ad.png?pic_center"></li>
+</ul>
+</li>
+<li><p>查看是否安装</p>
+<ul>
+<li><p><img src="https://img-blog.csdnimg.cn/c93ddc96d8c54ca9b1b40b29255c27cd.png?pic_center"></p>
+</li>
+<li><p>如果已安装中列表中没有OpenSSH，则点击添加功能按钮进行添加。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2、连接服务器"><a href="#2、连接服务器" class="headerlink" title="2、连接服务器"></a>2、连接服务器</h2><blockquote>
+<p>三种方式，但其本质是一致的。</p>
+<p>连接命令：<code>ssh user@host</code>，默认端口为22，如要指定端口号，则<code>ssh user@host -p port</code></p>
+</blockquote>
+<h3 id="1、运行窗口连接"><a href="#1、运行窗口连接" class="headerlink" title="1、运行窗口连接"></a>1、运行窗口连接</h3><p>Win+R打开运行窗口，输入连接命令，点击确定即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/a5a06765cff546998b2baf12a7bc9209.png?pic_center"></p>
+<h3 id="2、CMD命令窗口连接"><a href="#2、CMD命令窗口连接" class="headerlink" title="2、CMD命令窗口连接"></a>2、CMD命令窗口连接</h3><p><img src="https://img-blog.csdnimg.cn/518c260d57f24f6c848a177cc9d4d969.png?pic_center"></p>
+<h3 id="3、Bat批处理"><a href="#3、Bat批处理" class="headerlink" title="3、Bat批处理"></a>3、Bat批处理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:: 关闭回显</span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> 啥也不会的程序员</span><br><span class="line">:: User,Linux用户</span><br><span class="line"><span class="built_in">set</span> User=root</span><br><span class="line">:: Host,Linux服务器地址</span><br><span class="line"><span class="built_in">set</span> Host=10.0.0.100</span><br><span class="line">:: Port，Linux服务器端口</span><br><span class="line"><span class="built_in">set</span> Port=22</span><br><span class="line">:: ssh连接</span><br><span class="line">ssh %User%@%Host% -p %Port%</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、登出"><a href="#3、登出" class="headerlink" title="3、登出"></a>3、登出</h2><blockquote>
+<p>Ctrl+D或者logout命令即可</p>
+</blockquote>
+<h2 id="4、文件上传"><a href="#4、文件上传" class="headerlink" title="4、文件上传"></a>4、文件上传</h2><blockquote>
+<p>命令：<code>scp filePath user@host</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/07c1b521310f441dac2e82cd54ad6496.png?pic_center"></p>
+<h2 id="5、文件下载"><a href="#5、文件下载" class="headerlink" title="5、文件下载"></a>5、文件下载</h2><blockquote>
+<p>命令：<code>scp user@host:filePath outFilePath</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/55c04baaf37a4763b10ce79e6d501c71.png?pic_center"></p>
+<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clb860s8o0004f2okcw3d51da" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          VsCode下的Remote-SSH插件的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/25/Redis%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Redis事务的简单使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xhsell/" rel="tag">Xhsell</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Centos/" style="font-size: 10px;">Centos</a> <a href="/tags/Redis/" style="font-size: 20px;">Redis</a> <a href="/tags/SSH/" style="font-size: 20px;">SSH</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/Xhsell/" style="font-size: 20px;">Xhsell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/">使用XShell连接Vm虚拟机中安装的Centos</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/">使用XShell连接Vm虚拟机中安装的UbuntuServer20.04</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">VsCode下的Remote-SSH插件的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/">Win10自带OpenSSH的使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 啥也不会的程序员<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/%20%7C%7C%20fas%20fa-home" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives/%20%7C%7C%20fas%20fa-archive" class="mobile-nav-link">归档</a>
+  
+    <a href="/tags/%20%7C%7C%20fas%20fa-tags" class="mobile-nav-link">标签</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>VsCode下的Remote-SSH插件的使用 | My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0、前言 众所周知，Vs Code是一个非常NB的编辑器，它可以通过安装不同的插件，满足几乎所有的开发需求。最近了解到微软之前推出过一个Remote-SSH的插件，通过该插件可以在Vs Code上通过SSH连接Linux服务器进行终端操作或者文件编辑。所以本篇博客就是记录下怎么在Vs Code里面通过Remote-SSH插件连接Linux服务器并进行终端操作和文件编辑。  系统环境：  操作系统：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VsCode下的Remote-SSH插件的使用">
+<meta property="og:url" content="http://www.yanghuisen.cn/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="My Blog">
+<meta property="og:description" content="0、前言 众所周知，Vs Code是一个非常NB的编辑器，它可以通过安装不同的插件，满足几乎所有的开发需求。最近了解到微软之前推出过一个Remote-SSH的插件，通过该插件可以在Vs Code上通过SSH连接Linux服务器进行终端操作或者文件编辑。所以本篇博客就是记录下怎么在Vs Code里面通过Remote-SSH插件连接Linux服务器并进行终端操作和文件编辑。  系统环境：  操作系统：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/69a1292e05124259911f2c4f08fef94f.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/8bcf5c336f19494eae9a67a7cbb68bd8.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/8f8399a77a7e46cea4a30047b4149b20.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/5b565a3c214d47ef94badf8eeebd0527.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/746f685391984a8d87a5071a33594029.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/48b611b275734c1ca65b814950b1298a.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/153dc598f4e34d59b9561466bcc93b23.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/07760fcbd24d459186bdeaf3e402de86.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/eed947be34bc4fb993472d1d2562c909.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/b4db78860d4b460bbc89ad1dc4bc6614.png?pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7609028ea9b643d285d7a423293e36ec.png?pic_center">
+<meta property="article:published_time" content="2021-12-25T07:49:24.000Z">
+<meta property="article:modified_time" content="2022-12-03T16:44:34.148Z">
+<meta property="article:author" content="啥也不会的程序员">
+<meta property="article:tag" content="SSH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/69a1292e05124259911f2c4f08fef94f.png?pic_center">
+  
+    <link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">[object Object]</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/%20%7C%7C%20fas%20fa-home">主页</a>
+        
+          <a class="main-nav-link" href="/archives/%20%7C%7C%20fas%20fa-archive">归档</a>
+        
+          <a class="main-nav-link" href="/tags/%20%7C%7C%20fas%20fa-tags">标签</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.yanghuisen.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-VsCode下的Remote-SSH插件的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2021-12-25T07:49:24.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VsCode下的Remote-SSH插件的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0、前言"><a href="#0、前言" class="headerlink" title="0、前言"></a>0、前言</h2><blockquote>
+<p>众所周知，Vs Code是一个非常NB的编辑器，它可以通过安装不同的插件，满足几乎所有的开发需求。最近了解到微软之前推出过一个Remote-SSH的插件，通过该插件可以在Vs Code上通过SSH连接Linux服务器进行终端操作或者文件编辑。所以本篇博客就是记录下怎么在Vs Code里面通过Remote-SSH插件连接Linux服务器并进行终端操作和文件编辑。</p>
+</blockquote>
+<p><strong>系统环境：</strong></p>
+<ul>
+<li>操作系统：Windows 10</li>
+<li>服务器：Centos 7 64Bit</li>
+<li>软件：Vs Code 1.61.2</li>
+</ul>
+<h2 id="1、安装Remote-SSH插件"><a href="#1、安装Remote-SSH插件" class="headerlink" title="1、安装Remote-SSH插件"></a>1、安装Remote-SSH插件</h2><p>打开Vs Code，插件商店搜索Remote-SSH安装即可</p>
+<p><img src="https://img-blog.csdnimg.cn/69a1292e05124259911f2c4f08fef94f.png?pic_center"></p>
+<h2 id="2、配置Linux服务器连接"><a href="#2、配置Linux服务器连接" class="headerlink" title="2、配置Linux服务器连接"></a>2、配置Linux服务器连接</h2><p><img src="https://img-blog.csdnimg.cn/8bcf5c336f19494eae9a67a7cbb68bd8.png?pic_center"></p>
+<p><img src="https://img-blog.csdnimg.cn/8f8399a77a7e46cea4a30047b4149b20.png?pic_center"></p>
+<p>选择左侧小电脑，然后点击小齿轮，在弹出的选项中选择第一个即可。如图，第一个就表示将会把远程Linux服务器的连接地址以及用户信息保存在C:\Users\admin\.ssh\config路径下。</p>
+<p><img src="https://img-blog.csdnimg.cn/5b565a3c214d47ef94badf8eeebd0527.png?pic_center"></p>
+<ul>
+<li>Host：主机名称</li>
+<li>HostName：主机地址</li>
+<li>User：用户</li>
+</ul>
+<p>输入主机信息并保存后，在左侧列表就会出现配置的主机。</p>
+<h2 id="3、连接远程服务器"><a href="#3、连接远程服务器" class="headerlink" title="3、连接远程服务器"></a>3、连接远程服务器</h2><p>点击按钮连接服务器，打开新的窗口</p>
+<p><img src="https://img-blog.csdnimg.cn/746f685391984a8d87a5071a33594029.png?pic_center"></p>
+<p>输入用户密码</p>
+<p><img src="https://img-blog.csdnimg.cn/48b611b275734c1ca65b814950b1298a.png?pic_center"></p>
+<p>连接成功</p>
+<p><img src="https://img-blog.csdnimg.cn/153dc598f4e34d59b9561466bcc93b23.png?pic_center"></p>
+<h2 id="4、终端操作"><a href="#4、终端操作" class="headerlink" title="4、终端操作"></a>4、终端操作</h2><p><img src="https://img-blog.csdnimg.cn/07760fcbd24d459186bdeaf3e402de86.png?pic_center"></p>
+<p>顶部菜单栏 终端——新建终端即可。</p>
+<h2 id="5、编辑文件"><a href="#5、编辑文件" class="headerlink" title="5、编辑文件"></a>5、编辑文件</h2><p><img src="https://img-blog.csdnimg.cn/eed947be34bc4fb993472d1d2562c909.png?pic_center"></p>
+<p>顶部菜单栏：文件——打开文件|打开文件夹——选择对应的路径点击确认即可。</p>
+<p><font color="red">注：点击确定后会让重新输入用户密码</font></p>
+<p><img src="https://img-blog.csdnimg.cn/b4db78860d4b460bbc89ad1dc4bc6614.png?pic_center"></p>
+<p>比如我打开的是home目录，打开后，可以在下方进行终端操作，左侧预览文件，上方直接编辑。</p>
+<h2 id="6、文件上传"><a href="#6、文件上传" class="headerlink" title="6、文件上传"></a>6、文件上传</h2><p><img src="https://img-blog.csdnimg.cn/7609028ea9b643d285d7a423293e36ec.png?pic_center"></p>
+<p>文件上传同样很简单，直接把文件拖到左侧资源管理下的指定目录下即可。</p>
+<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clb860s8l0002f2ok9t489v6n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用XShell连接Vm虚拟机中安装的UbuntuServer20.04
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Win10自带OpenSSH的使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xhsell/" rel="tag">Xhsell</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Centos/" style="font-size: 10px;">Centos</a> <a href="/tags/Redis/" style="font-size: 20px;">Redis</a> <a href="/tags/SSH/" style="font-size: 20px;">SSH</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/Xhsell/" style="font-size: 20px;">Xhsell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/">使用XShell连接Vm虚拟机中安装的Centos</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/">使用XShell连接Vm虚拟机中安装的UbuntuServer20.04</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">VsCode下的Remote-SSH插件的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/">Win10自带OpenSSH的使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 啥也不会的程序员<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/%20%7C%7C%20fas%20fa-home" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives/%20%7C%7C%20fas%20fa-archive" class="mobile-nav-link">归档</a>
+  
+    <a href="/tags/%20%7C%7C%20fas%20fa-tags" class="mobile-nav-link">标签</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
