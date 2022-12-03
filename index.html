@@ -5,20 +5,20 @@
   
 
   
-  <title>Hexo</title>
+  <title>My Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:title" content="My Blog">
+<meta property="og:url" content="http://www.yanghuisen.cn/index.html">
+<meta property="og:site_name" content="My Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="啥也不会的程序员">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -36,8 +36,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">My Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">[object Object]</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -48,15 +52,21 @@
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/%20%7C%7C%20fas%20fa-home">主页</a>
+        
+          <a class="main-nav-link" href="/archives/%20%7C%7C%20fas%20fa-archive">归档</a>
+        
+          <a class="main-nav-link" href="/tags/%20%7C%7C%20fas%20fa-tags">标签</a>
+        
       </nav>
       <nav id="sub-nav">
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.yanghuisen.cn"></form>
       </div>
     </div>
   </div>
@@ -67,7 +77,7 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/12/04/hello-world/" class="article-date">
-  <time datetime="2022-12-03T16:31:01.763Z" itemprop="datePublished">2022-12-04</time>
+  <time datetime="2022-12-03T16:36:40.760Z" itemprop="datePublished">2022-12-04</time>
 </a>
     
   </div>
@@ -103,9 +113,483 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/04/hello-world/" data-id="clb85jd4h0000f7ov7srr1r18" class="article-share-link">Share</a>
+      <a data-url="http://www.yanghuisen.cn/2022/12/04/hello-world/" data-id="clb85qnio0005fiomhc9a5t65" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-使用XShell连接Vm虚拟机中安装的Centos" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/" class="article-date">
+  <time datetime="2021-12-25T07:59:38.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/">使用XShell连接Vm虚拟机中安装的Centos</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、配置网络模式"><a href="#1、配置网络模式" class="headerlink" title="1、配置网络模式"></a>1、配置网络模式</h2><p>配置虚拟机中的Centos系统的网络适配器</p>
+<p><img src="https://img-blog.csdnimg.cn/20210703213343909.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="2、配置VM的网络虚拟机"><a href="#2、配置VM的网络虚拟机" class="headerlink" title="2、配置VM的网络虚拟机"></a>2、配置VM的网络虚拟机</h2><p>VM软件→编辑→虚拟网络编辑器</p>
+<p><img src="https://img-blog.csdnimg.cn/20210703213428205.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>子网IP不一定要使用10.0.0.0，此处使用10.0.0.0是为了避免和其他IP冲突。</p>
+<p>网关IP需要在子网IP网段中。</p>
+<h2 id="3、配置V8虚拟网络适配器"><a href="#3、配置V8虚拟网络适配器" class="headerlink" title="3、配置V8虚拟网络适配器"></a>3、配置V8虚拟网络适配器</h2><p><img src="https://img-blog.csdnimg.cn/20210703213450336.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>IP地址需要在第二步骤配置的子网IP网段中。</p>
+<h2 id="4、配置Centos静态IP"><a href="#4、配置Centos静态IP" class="headerlink" title="4、配置Centos静态IP"></a>4、配置Centos静态IP</h2><p>启动服务器，使用<code>ip addr</code>查看网卡名称</p>
+<p><img src="https://img-blog.csdnimg.cn/20210703213506411.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>比如我的网卡名称就叫做<code>ens33</code>，并且大部分机器都是<code>ens33</code></p>
+<p>进入到<code>/etc/sysconfig/network-scripts</code>，使用vi命令编辑<code>ifcf-ens33</code>文件。</p>
+<p>如下</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">YPE</span>=<span class="string">Ethernet</span></span><br><span class="line"><span class="attr">PROXY_METHOD</span>=<span class="string">none</span></span><br><span class="line"><span class="attr">BROWSER_ONLY</span>=<span class="string">no</span></span><br><span class="line"><span class="attr">BOOTPROTO</span>=<span class="string">static</span></span><br><span class="line"><span class="attr">DEFROUTE</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPV4_FAILURE_FATAL</span>=<span class="string">no</span></span><br><span class="line"><span class="attr">IPV6INIT</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPV6_AUTOCONF</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPV6_DEFROUTE</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPV6_FAILURE_FATAL</span>=<span class="string">no</span></span><br><span class="line"><span class="attr">IPV6_ADDR_GEN_MODE</span>=<span class="string">stable-privacy</span></span><br><span class="line"><span class="attr">NAME</span>=<span class="string">ens33</span></span><br><span class="line"><span class="attr">UUID</span>=<span class="string">3e502ba4-72ed-4b45-8009-41c69c6d7e25</span></span><br><span class="line"><span class="attr">DEVICE</span>=<span class="string">ens33</span></span><br><span class="line"><span class="attr">ONBOOT</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPADDR</span>=<span class="string">10.0.0.100</span></span><br><span class="line"><span class="attr">NETMASK</span>=<span class="string">255.255.255.0</span></span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="string">10.0.0.1</span></span><br><span class="line"><span class="attr">DNS1</span>=<span class="string">114.114.114.114</span></span><br><span class="line"><span class="attr">DNS2</span>=<span class="string">8.8.8.8</span></span><br></pre></td></tr></table></figure>
+
+<p>主要修改一下几个配置</p>
+<ul>
+<li>BOOTPROTO=static：使用静态ip设置</li>
+<li>IPADDR=10.0.0.100：Centos服务器的IP，此IP需要在第二部配置的子网IP网段内。并且后期使用XShell连接时，就是连接此IP</li>
+<li>NETMASK=255.255.255.0：同第二步配置的子网掩码</li>
+<li>GATEWAY=10.0.0.1：同第二步配置的网关地址</li>
+<li>DNS1=114.114.114.114：DNS地址，配置为114.114.114.114即可</li>
+<li>DNS2=8.8.8.8：配置为8.8.8.8即可</li>
+<li>ONBOOT=yes：配置为YES即可</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/" data-id="clb85qniw0006fiomaua97j40" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xhsell/" rel="tag">Xhsell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-使用XShell连接Vm虚拟机中安装的UbuntuServer20-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/" class="article-date">
+  <time datetime="2021-12-25T07:59:04.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/">使用XShell连接Vm虚拟机中安装的UbuntuServer20.04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、配置网络桥接模式"><a href="#1、配置网络桥接模式" class="headerlink" title="1、配置网络桥接模式"></a>1、配置网络桥接模式</h2><p>配置虚拟机中的Ubuntu系统的网络适配器</p>
+<p><img src="https://img-blog.csdnimg.cn/20210704163335573.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="2、配置VM的网络虚拟机"><a href="#2、配置VM的网络虚拟机" class="headerlink" title="2、配置VM的网络虚拟机"></a>2、配置VM的网络虚拟机</h2><p>VM软件→编辑→虚拟网络编辑器</p>
+<p><img src="https://img-blog.csdnimg.cn/20210704163414510.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>子网IP不一定要使用10.0.0.0，此处使用10.0.0.0是为了避免和其他IP冲突。</p>
+<p>网关IP需要在子网IP网段中。</p>
+<h2 id="3、配置V8虚拟网络适配器"><a href="#3、配置V8虚拟网络适配器" class="headerlink" title="3、配置V8虚拟网络适配器"></a>3、配置V8虚拟网络适配器</h2><p><img src="https://img-blog.csdnimg.cn/20210704163430155.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>IP地址需要在第二步骤配置的子网IP网段中。</p>
+<h2 id="4、配置Ubuntu静态IP"><a href="#4、配置Ubuntu静态IP" class="headerlink" title="4、配置Ubuntu静态IP"></a>4、配置Ubuntu静态IP</h2><p>进入到<code>/etc/netplan</code>路径，使用<code>vim</code>命令编辑<code>yaml</code>网络配置文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210704163447782.png#pic_center" alt="在这里插入图片描述"></p>
+<p>红框为网络配置文件，建议在修改网络配置文件之前，对源文件进行备份。</p>
+<p>内容如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">ens33:</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span> [<span class="number">10.0</span><span class="number">.0</span><span class="number">.110</span><span class="string">/24</span>]</span><br><span class="line">      <span class="attr">gateway4:</span> <span class="number">10.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">              <span class="attr">addresses:</span> [<span class="number">114.114</span><span class="number">.114</span><span class="number">.114</span>,<span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span>]</span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>主要修改一下几个配置</p>
+<ul>
+<li>dhcp4: false：不使用dhcp服务(动态IP分配)</li>
+<li>addresses: [10.0.0.110/24]：Ubuntu服务器的IP，此IP需要在第二部配置的子网IP网段内。并且后期使用XShell连接时，就是连接此IP</li>
+<li>gateway4: 10.0.0.1：同第二步配置的网关地址</li>
+<li>addresses: [114.114.114.114,8.8.8.8]：DNS地址，配置为114.114.114.114,8.8.8.8即可</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/" data-id="clb85qniy0009fiomhpds3lcx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xhsell/" rel="tag">Xhsell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VsCode下的Remote-SSH插件的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2021-12-25T07:49:24.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">VsCode下的Remote-SSH插件的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0、前言"><a href="#0、前言" class="headerlink" title="0、前言"></a>0、前言</h2><blockquote>
+<p>众所周知，Vs Code是一个非常NB的编辑器，它可以通过安装不同的插件，满足几乎所有的开发需求。最近了解到微软之前推出过一个Remote-SSH的插件，通过该插件可以在Vs Code上通过SSH连接Linux服务器进行终端操作或者文件编辑。所以本篇博客就是记录下怎么在Vs Code里面通过Remote-SSH插件连接Linux服务器并进行终端操作和文件编辑。</p>
+</blockquote>
+<p><strong>系统环境：</strong></p>
+<ul>
+<li>操作系统：Windows 10</li>
+<li>服务器：Centos 7 64Bit</li>
+<li>软件：Vs Code 1.61.2</li>
+</ul>
+<h2 id="1、安装Remote-SSH插件"><a href="#1、安装Remote-SSH插件" class="headerlink" title="1、安装Remote-SSH插件"></a>1、安装Remote-SSH插件</h2><p>打开Vs Code，插件商店搜索Remote-SSH安装即可</p>
+<p><img src="https://img-blog.csdnimg.cn/69a1292e05124259911f2c4f08fef94f.png?pic_center"></p>
+<h2 id="2、配置Linux服务器连接"><a href="#2、配置Linux服务器连接" class="headerlink" title="2、配置Linux服务器连接"></a>2、配置Linux服务器连接</h2><p><img src="https://img-blog.csdnimg.cn/8bcf5c336f19494eae9a67a7cbb68bd8.png?pic_center"></p>
+<p><img src="https://img-blog.csdnimg.cn/8f8399a77a7e46cea4a30047b4149b20.png?pic_center"></p>
+<p>选择左侧小电脑，然后点击小齿轮，在弹出的选项中选择第一个即可。如图，第一个就表示将会把远程Linux服务器的连接地址以及用户信息保存在C:\Users\admin\.ssh\config路径下。</p>
+<p><img src="https://img-blog.csdnimg.cn/5b565a3c214d47ef94badf8eeebd0527.png?pic_center"></p>
+<ul>
+<li>Host：主机名称</li>
+<li>HostName：主机地址</li>
+<li>User：用户</li>
+</ul>
+<p>输入主机信息并保存后，在左侧列表就会出现配置的主机。</p>
+<h2 id="3、连接远程服务器"><a href="#3、连接远程服务器" class="headerlink" title="3、连接远程服务器"></a>3、连接远程服务器</h2><p>点击按钮连接服务器，打开新的窗口</p>
+<p><img src="https://img-blog.csdnimg.cn/746f685391984a8d87a5071a33594029.png?pic_center"></p>
+<p>输入用户密码</p>
+<p><img src="https://img-blog.csdnimg.cn/48b611b275734c1ca65b814950b1298a.png?pic_center"></p>
+<p>连接成功</p>
+<p><img src="https://img-blog.csdnimg.cn/153dc598f4e34d59b9561466bcc93b23.png?pic_center"></p>
+<h2 id="4、终端操作"><a href="#4、终端操作" class="headerlink" title="4、终端操作"></a>4、终端操作</h2><p><img src="https://img-blog.csdnimg.cn/07760fcbd24d459186bdeaf3e402de86.png?pic_center"></p>
+<p>顶部菜单栏 终端——新建终端即可。</p>
+<h2 id="5、编辑文件"><a href="#5、编辑文件" class="headerlink" title="5、编辑文件"></a>5、编辑文件</h2><p><img src="https://img-blog.csdnimg.cn/eed947be34bc4fb993472d1d2562c909.png?pic_center"></p>
+<p>顶部菜单栏：文件——打开文件|打开文件夹——选择对应的路径点击确认即可。</p>
+<p><font color="red">注：点击确定后会让重新输入用户密码</font></p>
+<p><img src="https://img-blog.csdnimg.cn/b4db78860d4b460bbc89ad1dc4bc6614.png?pic_center"></p>
+<p>比如我打开的是home目录，打开后，可以在下方进行终端操作，左侧预览文件，上方直接编辑。</p>
+<h2 id="6、文件上传"><a href="#6、文件上传" class="headerlink" title="6、文件上传"></a>6、文件上传</h2><p><img src="https://img-blog.csdnimg.cn/7609028ea9b643d285d7a423293e36ec.png?pic_center"></p>
+<p>文件上传同样很简单，直接把文件拖到左侧资源管理下的指定目录下即可。</p>
+<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clb85qnil0002fiom5ucb14af" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Win10自带OpenSSH的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2021-12-25T07:46:26.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/">Win10自带OpenSSH的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0、前言"><a href="#0、前言" class="headerlink" title="0、前言"></a>0、前言</h2><blockquote>
+<p>昨天写了一篇文章，记录了使用Vs Code的Remote-SSH的插件连接远程Linux服务器的方法。后来觉得还是很麻烦，需要先装Vs Code其次又要装Remote-SSH插件。今天网上查了查，其中有一篇文章提到，微软官方在2018年4月份更新的Win10版本中加入了正式版的OpenSSH，并默认安装在Win10系统中。所以本篇文章就是为了记录怎么在Win10默认环境下，使用OpenSSH远程连接Linux服务器。</p>
+</blockquote>
+<p><strong>系统环境：</strong></p>
+<ul>
+<li>操作系统：Windows 10 21H1</li>
+<li>服务器：Centos 7 64Bit</li>
+</ul>
+<h2 id="1、检查是否安装有OpenSSH"><a href="#1、检查是否安装有OpenSSH" class="headerlink" title="1、检查是否安装有OpenSSH"></a>1、检查是否安装有OpenSSH</h2><ol>
+<li><p>打开系统的设置页面，可以使用快捷键Win+I打开。</p>
+</li>
+<li><p>应用—可选功能</p>
+<ul>
+<li><img src="https://img-blog.csdnimg.cn/f23ca096223c44539068687d924633ad.png?pic_center"></li>
+</ul>
+</li>
+<li><p>查看是否安装</p>
+<ul>
+<li><p><img src="https://img-blog.csdnimg.cn/c93ddc96d8c54ca9b1b40b29255c27cd.png?pic_center"></p>
+</li>
+<li><p>如果已安装中列表中没有OpenSSH，则点击添加功能按钮进行添加。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2、连接服务器"><a href="#2、连接服务器" class="headerlink" title="2、连接服务器"></a>2、连接服务器</h2><blockquote>
+<p>三种方式，但其本质是一致的。</p>
+<p>连接命令：<code>ssh user@host</code>，默认端口为22，如要指定端口号，则<code>ssh user@host -p port</code></p>
+</blockquote>
+<h3 id="1、运行窗口连接"><a href="#1、运行窗口连接" class="headerlink" title="1、运行窗口连接"></a>1、运行窗口连接</h3><p>Win+R打开运行窗口，输入连接命令，点击确定即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/a5a06765cff546998b2baf12a7bc9209.png?pic_center"></p>
+<h3 id="2、CMD命令窗口连接"><a href="#2、CMD命令窗口连接" class="headerlink" title="2、CMD命令窗口连接"></a>2、CMD命令窗口连接</h3><p><img src="https://img-blog.csdnimg.cn/518c260d57f24f6c848a177cc9d4d969.png?pic_center"></p>
+<h3 id="3、Bat批处理"><a href="#3、Bat批处理" class="headerlink" title="3、Bat批处理"></a>3、Bat批处理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">:: 关闭回显</span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> 啥也不会的程序员</span><br><span class="line">:: User,Linux用户</span><br><span class="line"><span class="built_in">set</span> User=root</span><br><span class="line">:: Host,Linux服务器地址</span><br><span class="line"><span class="built_in">set</span> Host=10.0.0.100</span><br><span class="line">:: Port，Linux服务器端口</span><br><span class="line"><span class="built_in">set</span> Port=22</span><br><span class="line">:: ssh连接</span><br><span class="line">ssh %User%@%Host% -p %Port%</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、登出"><a href="#3、登出" class="headerlink" title="3、登出"></a>3、登出</h2><blockquote>
+<p>Ctrl+D或者logout命令即可</p>
+</blockquote>
+<h2 id="4、文件上传"><a href="#4、文件上传" class="headerlink" title="4、文件上传"></a>4、文件上传</h2><blockquote>
+<p>命令：<code>scp filePath user@host</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/07c1b521310f441dac2e82cd54ad6496.png?pic_center"></p>
+<h2 id="5、文件下载"><a href="#5、文件下载" class="headerlink" title="5、文件下载"></a>5、文件下载</h2><blockquote>
+<p>命令：<code>scp user@host:filePath outFilePath</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/55c04baaf37a4763b10ce79e6d501c71.png?pic_center"></p>
+<h2 id="到此结束"><a href="#到此结束" class="headerlink" title="到此结束"></a>到此结束</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="clb85qnin0004fiombncg1k45" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Redis事务的简单使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/Redis%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2021-12-25T06:56:07.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/25/Redis%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">Redis事务的简单使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>问题：如果<code>Java</code>代码出现了异常，怎么对<code>Redis</code>进行回滚？</strong></p>
+<p>一次和朋友聊天聊到了这个问题，当时第一想法就是，<code>try-catch</code>异常，在<code>catch</code>里对之前插入到<code>Redis</code>的数据进行删除操作。但是接下来又有一个问题：<strong>如果在删除时报错了怎么办？</strong></p>
+<h2 id="什么是事务？"><a href="#什么是事务？" class="headerlink" title="什么是事务？"></a>什么是事务？</h2><p>学过关系型数据库的应该都知道，事务有一个<code>ACID</code>原则，即事务的四大特性：</p>
+<ol>
+<li><code>atomicity(原子性)</code>：一个事务是一个不可分割的工作单位，事务中包括的操作要么都做，要么都不做</li>
+<li><code>consistency(一致性)</code>：事务必须是使数据库从一个一致性状态变到另一个一致性状态。一致性与原子性是密切相关的。</li>
+<li><code>isolation(隔离性)</code>：一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。</li>
+<li><code>durability(持久性)</code>：指一个事务一旦提交，它对数据库中数据的改变就应该是永久性的。接下来的其他操作或故障不应该对其有任何影响。</li>
+</ol>
+<p>上面的<code>ACID</code>指的是关系型数据库，但是<code>Redis</code>作为一个<code>NoSQL(非关系型数据库)</code>，它的事务肯定是和关系型数据库的不一样。</p>
+<p><code>Redis</code>的事务很简单，简单到它的本质其实就是一个队列。流程如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/24aa084000644b57b4acb55da74c110a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5ZWl5Lmf5LiN5Lya55qE56iL5bqP5ZGYQ29kZQ==,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<p>需要说明一下，加入到队列中的<code>Redis</code>命令并不会执行，只有输入了<code>EXEC(提交事务)</code>的命令后，才会依次执行队列中的命令。</p>
+<p><strong>事务的三个阶段：</strong></p>
+<ol>
+<li>开始事务</li>
+<li>命令入对</li>
+<li>执行事务</li>
+</ol>
+<h2 id="Redis事务的简单使用"><a href="#Redis事务的简单使用" class="headerlink" title="Redis事务的简单使用"></a>Redis事务的简单使用</h2><ol>
+<li>使用<code>multi</code>命令，开启事务</li>
+<li>输入<code>redis</code>命令</li>
+<li>使用<code>exec</code>命令，提交事务</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启事务</span></span><br><span class="line">127.0.0.1:6379&gt; multi</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = zhangsan</span></span><br><span class="line">127.0.0.1:6379&gt; set name zhangsan</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> age = 18</span></span><br><span class="line">127.0.0.1:6379&gt; set age 18</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> 提交事务</span></span><br><span class="line">127.0.0.1:6379&gt; exec</span><br><span class="line">1) OK</span><br><span class="line">2) OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;name&quot;</span><br><span class="line">2) &quot;age&quot;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，开启事务之前，什么数据都没有，只有执行<code>EXEC(提交事务)</code>命令后，才会依次执行被事务包含的命令，并打印<code>OK</code>。</p>
+<h2 id="Redis事务的“原子性”"><a href="#Redis事务的“原子性”" class="headerlink" title="Redis事务的“原子性”"></a>Redis事务的“原子性”</h2><p><code>atomicity(原子性)</code>的要求就是，要么全部执行，要么全部不执行。但是<code>Redis</code>的原子性却有所不同，当事务提交提交之后，会依次执行队列中的命令，如果队列中的其中一个命令执行出错，并不会影响到其他的命令。显然这个不满足原子性的条件，所以<code>Redis事务不是原子性</code>的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启事务</span></span><br><span class="line">127.0.0.1:6379&gt; multi</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = zhangsan</span></span><br><span class="line">127.0.0.1:6379&gt; set name zhangsan</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> age = 18</span></span><br><span class="line">127.0.0.1:6379&gt; set age 18</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将key为name的值+1</span></span><br><span class="line">127.0.0.1:6379&gt; incr name</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将key为age的值+1</span></span><br><span class="line">127.0.0.1:6379&gt; incr age</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> 提交事务</span></span><br><span class="line">127.0.0.1:6379&gt; exec</span><br><span class="line">1) OK</span><br><span class="line">2) OK</span><br><span class="line">3) (error) ERR value is not an integer or out of range</span><br><span class="line">4) (integer) 19</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;name&quot;</span><br><span class="line">2) &quot;age&quot;</span><br><span class="line"><span class="meta">#</span><span class="bash"> get name</span></span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line">&quot;zhangsan&quot;</span><br><span class="line"><span class="meta">#</span><span class="bash"> get age</span></span><br><span class="line">127.0.0.1:6379&gt; get age</span><br><span class="line">&quot;19&quot;</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，执行时报了<code>(error) ERR value is not an integer or out of range</code>错误，但是整体来看，只有<code>incr age</code>命令执行失败其它的都是执行成功 。所以可以看到，确实不符合<code>原子性</code>的要求。</p>
+<p>注：<code>Redis</code>的单条命令是原子性的，但是事务不是原子性的。</p>
+<h2 id="Redis的事务“回滚”"><a href="#Redis的事务“回滚”" class="headerlink" title="Redis的事务“回滚”"></a>Redis的事务“回滚”</h2><p>严格来说，<code>Redis</code>的事务是不能回滚的。<code>Redis</code>只提供了一个<code>DISCARD</code>命令，作用就是取消事务。前面提到过，<code>Redis</code>的事务本质就是一个队列，开启事务之后的所有命令都是被放在队列中，只有执行<code>EXEC(提交事务)</code>命令，才会依次执行队列中的命令。执行<code>DISCARD</code>命令时，会放弃队列中的所用命令，结束本次事务，所以严格来说，<code>Redis</code>的事务是不能回滚的，只能取消，且取消操作需要在执行<code>EXEC(提交事务)</code>命令之前。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启事务</span></span><br><span class="line">127.0.0.1:6379&gt; multi</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = zhangsan</span></span><br><span class="line">127.0.0.1:6379&gt; set name zhangsan</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> 取消事务</span></span><br><span class="line">127.0.0.1:6379&gt; discard</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，开启事务之前什么数据都没有，执行<code>DISCARD(取消事务)</code>命令后，也是什么数都没插入。</p>
+<h2 id="Redis事务的WATCH和Unwatch命令"><a href="#Redis事务的WATCH和Unwatch命令" class="headerlink" title="Redis事务的WATCH和Unwatch命令"></a>Redis事务的WATCH和Unwatch命令</h2><blockquote>
+<p><code>WATCH</code>：监视一个或者多个<code>Key</code>，如果在事务执行之前，被监控的<code>Key</code>的值如果被改变，则事务将会被打断。</p>
+<p><code>Unwatch</code>：放弃监控。</p>
+</blockquote>
+<h3 id="WATCH"><a href="#WATCH" class="headerlink" title="WATCH"></a>WATCH</h3><p>监视Name</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 监视 key = name</span></span><br><span class="line">127.0.0.1:6379&gt; watch name</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启事务</span></span><br><span class="line">127.0.0.1:6379&gt; multi</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = zhangsan</span></span><br><span class="line">127.0.0.1:6379&gt; set name zhangsan</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> age = 18</span></span><br><span class="line">127.0.0.1:6379&gt; set age 18</span><br><span class="line">QUEUED</span><br></pre></td></tr></table></figure>
+
+<p>创建一个新的绘画，修改name的值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = list</span></span><br><span class="line">127.0.0.1:6379&gt; set name lisi</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+
+<p>提交事务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 提交事务</span></span><br><span class="line">127.0.0.1:6379&gt; exec</span><br><span class="line">(nil)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;name&quot;</span><br><span class="line"><span class="meta">#</span><span class="bash"> get name</span></span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line">&quot;lisi&quot;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，和之前的不同，执行<code>exec</code>后返回的不是<code>OK</code>而是<code>nil</code>。同时 事务中设置的name和age的值也不存在，只有在另一个会话中set的name。可以得出结论：<code>被监控的Key的值如果被改变，则整个事务将会执行失败</code>。</p>
+<h3 id="Unwatch"><a href="#Unwatch" class="headerlink" title="Unwatch"></a>Unwatch</h3><p>终端A</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 监控 key = name</span></span><br><span class="line">127.0.0.1:6379&gt; watch name</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> 取消监视</span></span><br><span class="line">127.0.0.1:6379&gt; unwatch</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启事务</span></span><br><span class="line">127.0.0.1:6379&gt; multi</span><br><span class="line">OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = zhangsan</span></span><br><span class="line">127.0.0.1:6379&gt; set name zhangsan</span><br></pre></td></tr></table></figure>
+
+<p>终端B</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name = list</span></span><br><span class="line">127.0.0.1:6379&gt; set name list</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+
+<p>终端A</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> name wanger</span></span><br><span class="line">127.0.0.1:6379&gt; set name wanger</span><br><span class="line">QUEUED</span><br><span class="line"><span class="meta">#</span><span class="bash"> 提交事务</span></span><br><span class="line">127.0.0.1:6379&gt; exec</span><br><span class="line">1) OK</span><br><span class="line">2) OK</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看所有的Key</span></span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">1) &quot;name&quot;</span><br><span class="line"><span class="meta">#</span><span class="bash"> get name</span></span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line">&quot;wanger&quot;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，执行了<code>unwatch</code>命令后，在终端B修改<code>name</code>的值，不会出现整个事务失败的问题。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>Redis的单条命令支持原子性，但是事务不支持原子性。</li>
+<li>Redis的事务是不能回滚的，但是可以取消事务(放弃事务)。</li>
+<li>Redis事务有四个方法<ul>
+<li>DISCARD：取消事务(放弃事务)</li>
+<li>EXEC：提交事务(执行事务)</li>
+<li>MULTI：开启事务</li>
+<li>UNWATCH：取消所有监视</li>
+<li>WATCH：监视1个或者多个Key</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/Redis%E4%BA%8B%E5%8A%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-id="clb85qnii0001fiomd3ync5cr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-基于Docker在Centos上安装Oracle数据库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/25/%E5%9F%BA%E4%BA%8EDocker%E5%9C%A8Centos%E4%B8%8A%E5%AE%89%E8%A3%85Oracle%E6%95%B0%E6%8D%AE%E5%BA%93/" class="article-date">
+  <time datetime="2021-12-25T06:56:07.000Z" itemprop="datePublished">2021-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/25/%E5%9F%BA%E4%BA%8EDocker%E5%9C%A8Centos%E4%B8%8A%E5%AE%89%E8%A3%85Oracle%E6%95%B0%E6%8D%AE%E5%BA%93/">基于Docker在Centos上安装Oracle数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Oracle数据库的占用太大，不想安装在物理机上，毕竟用的也不多，所以想把它装在虚拟机中的Centos服务器上，但是安装Linux版的太麻烦，所以为了简化安装过程，选择了在Docker中安装。</p>
+</blockquote>
+<h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><blockquote>
+<p>这一步没什么好说的，如果已经装过了Docker可以跳过此步骤。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror aliyun	# 安装docker</span><br><span class="line">systemctl start docker	# 启动Docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="拉取Oracle的镜像"><a href="#拉取Oracle的镜像" class="headerlink" title="拉取Oracle的镜像"></a>拉取Oracle的镜像</h2><blockquote>
+<p>该镜像很大，需要耐心等待….</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g	# 拉取镜像，该步骤需要耐心等待...</span><br><span class="line">docker images	# 查看镜像</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20210710143937517.png#pic_center"></p>
+<h2 id="创建Oracle容器"><a href="#创建Oracle容器" class="headerlink" title="创建Oracle容器"></a>创建Oracle容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 1521:1521 --name oracle11g registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g</span><br></pre></td></tr></table></figure>
+
+<h2 id="进入容器切换为Root用户"><a href="#进入容器切换为Root用户" class="headerlink" title="进入容器切换为Root用户"></a>进入容器切换为Root用户</h2><blockquote>
+<p>切换为Root用户。密码为：helowin</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it oracle11g bash		# 进入容器内部</span><br><span class="line">su root								# 切换为Root用户。密码为：helowin</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置Oracle的环境变量"><a href="#配置Oracle的环境变量" class="headerlink" title="配置Oracle的环境变量"></a>配置Oracle的环境变量</h2><blockquote>
+<p>使用vi命令修改profile文件，配置Oracle的环境变量</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile						# 修改profile文件，配置Oracle的环境变量</span><br></pre></td></tr></table></figure>
+
+<p>配置内容如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2</span><br><span class="line">export ORACLE_SID=helowin</span><br><span class="line">export PATH=$ORACLE_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210710143909951.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="刷新配置文件，使其生效"><a href="#刷新配置文件，使其生效" class="headerlink" title="刷新配置文件，使其生效"></a>刷新配置文件，使其生效</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="登陆sqlplus"><a href="#登陆sqlplus" class="headerlink" title="登陆sqlplus"></a>登陆sqlplus</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su oracle</span><br><span class="line">sqlplus /nolog</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改sys、system用户的密码"><a href="#修改sys、system用户的密码" class="headerlink" title="修改sys、system用户的密码"></a>修改sys、system用户的密码</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn <span class="operator">/</span><span class="keyword">as</span> sysdba		<span class="comment">-- 使用sysdba连接Oracle，最大的权限，os认证，只能在本机上登陆使用。</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20210710144013638.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="keyword">system</span> identified <span class="keyword">by</span> <span class="keyword">system</span>;		<span class="comment">-- 修改system用户的密码为systemalter user sys identified by sys;			-- 修改sys用户的密码为sysalter profile default limit password_life_time unlimited;	-- 默认口令是有180天的限制的，如果180没有修改密码，则该用户就无法登陆。此处是去除180密码限制。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="创建orcl用户"><a href="#创建orcl用户" class="headerlink" title="创建orcl用户"></a>创建orcl用户</h2><blockquote>
+<p>到上面那一步就可以了，此步骤可有可无。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> orcl identified <span class="keyword">by</span> <span class="number">123456</span>;		<span class="comment">-- 创建orcl用户，密码为123456</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">connect</span>,resource,dba <span class="keyword">to</span> orcl;			<span class="comment">-- 给orcl用户赋予connect,resource,dba三个角色的权限。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用PLSQL连接数据库"><a href="#使用PLSQL连接数据库" class="headerlink" title="使用PLSQL连接数据库"></a>使用PLSQL连接数据库</h2><blockquote>
+<p>数据库地址为：<code>服务器IP:1521/helowin</code></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20210711164419757.png?t_70#pic_center" alt="在这里插入图片描述"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.yanghuisen.cn/2021/12/25/%E5%9F%BA%E4%BA%8EDocker%E5%9C%A8Centos%E4%B8%8A%E5%AE%89%E8%A3%85Oracle%E6%95%B0%E6%8D%AE%E5%BA%93/" data-id="clb85qniz000afiomew4t6bjb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li></ul>
+
     </footer>
   </div>
   
@@ -123,15 +607,10 @@
 
   
     
-
-  
-    
-  
-    
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xhsell/" rel="tag">Xhsell</a></li></ul>
     </div>
   </div>
 
@@ -139,12 +618,47 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Centos/" style="font-size: 10px;">Centos</a> <a href="/tags/Redis/" style="font-size: 20px;">Redis</a> <a href="/tags/SSH/" style="font-size: 20px;">SSH</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/Xhsell/" style="font-size: 20px;">Xhsell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
           <li>
             <a href="/2022/12/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/">使用XShell连接Vm虚拟机中安装的Centos</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/">使用XShell连接Vm虚拟机中安装的UbuntuServer20.04</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/VsCode%E4%B8%8B%E7%9A%84Remote-SSH%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">VsCode下的Remote-SSH插件的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/25/Win10%E8%87%AA%E5%B8%A6OpenSSH%E7%9A%84%E4%BD%BF%E7%94%A8/">Win10自带OpenSSH的使用</a>
           </li>
         
       </ul>
@@ -159,7 +673,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2022 John Doe<br>
+      &copy; 2022 啥也不会的程序员<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -170,6 +684,12 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/%20%7C%7C%20fas%20fa-home" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives/%20%7C%7C%20fas%20fa-archive" class="mobile-nav-link">归档</a>
+  
+    <a href="/tags/%20%7C%7C%20fas%20fa-tags" class="mobile-nav-link">标签</a>
   
 </nav>
     
