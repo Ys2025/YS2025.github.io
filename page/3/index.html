@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog</title><meta name="author" content="YANG"><meta name="copyright" content="YANG"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://www.yanghuisen.cn/page/3/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.yanghuisen.cn/img/avatar.jpg">
+<meta property="article:author" content="YANG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.yanghuisen.cn/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://www.yanghuisen.cn/page/3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: YANG","link":"链接: ","source":"来源: Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-12-12 20:48:50'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/index_img6.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Ys2025" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/Asdzxc968" target="_blank" title="CSDN"><i class="fas fa-blog"></i></a><a class="social-icon" href="mailto:admin@yanghuisen.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/17/%E6%B7%BB%E5%8A%A0Eureka%E4%BE%9D%E8%B5%96%E5%90%8E%E8%BF%94%E5%9B%9EXML%E8%80%8C%E4%B8%8D%E6%98%AFJSON%E6%95%B0%E6%8D%AE/" title="添加Eureka依赖后返回XML而不是JSON数据">     <img class="post_bg" src="/img/index_img5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="添加Eureka依赖后返回XML而不是JSON数据"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/17/%E6%B7%BB%E5%8A%A0Eureka%E4%BE%9D%E8%B5%96%E5%90%8E%E8%BF%94%E5%9B%9EXML%E8%80%8C%E4%B8%8D%E6%98%AFJSON%E6%95%B0%E6%8D%AE/" title="添加Eureka依赖后返回XML而不是JSON数据">添加Eureka依赖后返回XML而不是JSON数据</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-17T09:32:21.000Z" title="发表于 2020-06-17 17:32:21">2020-06-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Eureka/">Eureka</a></span></div><div class="content">添加Eureka依赖后返回的是XML格式的数据而不是JSON格式的数据，是因为Eureka中默认集成了com.fasterxml.jackson.dataformat的jackson-dataformat-xml。XML的优先级比JSON的高，所以会优先返回XML。解决办法1、去除com.fasterxml.jackson.dataformat的jackson-dataformat-xml修改pom中的依赖
+1234567891011&lt;dependency&gt;    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;    &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;    &lt;!--去除jackson-dataformat-xml，否则会返回xml文件，而不是JSON--&gt;    &lt;exclusions&gt;        &lt;exclusion&gt;            & ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/13/Java%E7%9A%84%E6%B3%A8%E9%87%8A%E7%9C%9F%E7%9A%84%E4%B8%8D%E4%BC%9A%E8%A2%AB%E6%89%A7%E8%A1%8C%E5%90%97/" title="Java的注释真的不会被执行吗?">     <img class="post_bg" src="/img/index_img5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java的注释真的不会被执行吗?"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/13/Java%E7%9A%84%E6%B3%A8%E9%87%8A%E7%9C%9F%E7%9A%84%E4%B8%8D%E4%BC%9A%E8%A2%AB%E6%89%A7%E8%A1%8C%E5%90%97/" title="Java的注释真的不会被执行吗?">Java的注释真的不会被执行吗?</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-13T15:11:02.000Z" title="发表于 2020-06-13 23:11:02">2020-06-13</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a></span></div><div class="content">这个问题也是在别的地方看到的，原标题是《老师，你确定注释不会被执行吗？》。当然，标题不是重点，重点是Java注释真的会被执行吗？
+一开始知道这个问题的时候我也是很疑惑，因为不管学习什么编程语言，最开始的时候都会被告知，注释是不会被执行的，那么现在为什么又出现了Java注释会被执行这一个说法。有句话说的好，你以为的只是你以为的，什么地方不清楚，写个程序跑一下就知道了。
+话不多少，看代码，看结果
+1234567public class Test &#123;    public static void main(String[] args) &#123;        String str = &quot;啊哈哈&quot;;        // \u000d str = &quot;啥也不会的程序员&quot;;        System.out.println(str);    &#125;&#125;
+
+正常来时，结果应该是打印啊哈哈。但是其实打印的是啥也不会的程序员。为什么结果会是打印啥也不会的程序员呢？既然不清楚，那就分析class文件呗，看看这个java程序被编译成了什么（使 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/13/Arrays-asList-%E7%9C%9F%E7%9A%84%E5%B0%B1%E6%8A%8A%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%86List%E9%9B%86%E5%90%88%E5%90%97/" title="Arrays.asList()真的就把数组转换为了List集合吗?">     <img class="post_bg" src="/img/index_img4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Arrays.asList()真的就把数组转换为了List集合吗?"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/13/Arrays-asList-%E7%9C%9F%E7%9A%84%E5%B0%B1%E6%8A%8A%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%86List%E9%9B%86%E5%90%88%E5%90%97/" title="Arrays.asList()真的就把数组转换为了List集合吗?">Arrays.asList()真的就把数组转换为了List集合吗?</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-13T13:56:10.000Z" title="发表于 2020-06-13 21:56:10">2020-06-13</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a></span></div><div class="content">看面试题的时候，里面提到了这个，之前都是常规的使用，把数组转换为List集合，程序每次也都正常的运行，没在意过这个问题。看到这个问题时直接懵了，难道我之前的使用是错误的吗？后来查了资料确实是有点问题，Arrays.asList()还就真就没把数组转换为List集合，源码底层还是一个数组！。
+话不多说。直接上代码，结果才是唯一真理。
+再简单不过的一个把数组转换为List集合的例子。
+1234567public class ArraysTest &#123;    public static void main(String[] args) &#123;        String[] strings = new String[]&#123;&quot;张三&quot;,&quot;李四&quot;,&quot;王二&quot;,&quot;麻子&quot;&#125;;        List&lt;String&gt; list = Arrays.asList(strings);        list.add(&quot;啥也不会的程序员&quot;);    &#125;&#125 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/05/30/RabbitMQ%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/" title="RabbitMQ消息队列的入门使用">     <img class="post_bg" src="/img/index_img4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RabbitMQ消息队列的入门使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/30/RabbitMQ%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/" title="RabbitMQ消息队列的入门使用">RabbitMQ消息队列的入门使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-30T06:04:34.000Z" title="发表于 2020-05-30 14:04:34">2020-05-30</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/RabbitMQ/">RabbitMQ</a></span></div><div class="content">1、MQ简介MQ（Message Queue）消息队列，是基础数据结构中“先进先出”的一种数据机构。指把要传输的数据（消息）放在队列中，用队列机制来实现消息传递——生产者产生消息并把消息放入队列，然后由消费者去处理。消费者可以到指定队列拉取消息，或者订阅相应的队列，由MQ服务端给其推送消息。(来源：百度百科)
+1.1、实现消息队列常常保存在链表结构中，拥有权限的进程可以向消息队列中写入或读取消息。
+当前使用较多的消息队列有：RebbitMQ、RocketMQ、ActiveMQ、kafka、ZeroMQ、MetaMq等。而部分数据库也具有消息队列功能的，例如：Redis、Mysql、以及phxsql。
+1.2、特点MQ是一种消费者和生产者形式。生产者往消息队列中不断的写入新的消息数据，消费者从消息队列中获取消息数据。MQ和JMS类似，但不同的是JMS是Sun Java 消息中间件服务的一个标准和API定义，而MQ则是遵循了AMQP协议的具体实现和产品。
+
+AMQP：
+
+即Advanced Message Queuing Protocol,一个提供统一消息服务的应用层标准高级消息 队列协议 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/05/14/Redis%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/" title="Redis的入门使用">     <img class="post_bg" src="/img/index_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis的入门使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/05/14/Redis%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/" title="Redis的入门使用">Redis的入门使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-14T13:59:06.000Z" title="发表于 2020-05-14 21:59:06">2020-05-14</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Redis/">Redis</a></span></div><div class="content">0、Redis
+
+REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。
+Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。
+它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。
+
+Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。
+Redis 与其他 key - value 缓存产品有以下三个特点：
+
+Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。
+Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。
+Redis支持数据的备份，即master-slave模式的数据备份。
+
+Redis的优势：
+
+性能极高 – Red ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/01/FreeMarker%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="FreeMarker的简单使用">     <img class="post_bg" src="/img/index_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FreeMarker的简单使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/01/FreeMarker%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" title="FreeMarker的简单使用">FreeMarker的简单使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-01T11:00:51.000Z" title="发表于 2020-04-01 19:00:51">2020-04-01</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/FreeMarker/">FreeMarker</a></span></div><div class="content">一、FreeMarker概述FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。
+FreeMarker 被设计⽤来⽣成 HTML Web ⻚⾯，特别是基于 MVC 模式的应⽤程序，将视图从业务逻辑中抽离处理，业务中不再包括视图的展示，⽽是将视图交给 FreeMarker 来输出。由FreeMarker生成页面，通过模板显示准备的数据。
+FreeMarker不是Web应用框架，而是一个Web应用框架的组件。与容器无关，它并不知道HTTP或者Servlet。FreeMarker同样可以应用在非Web应用程序环境中
+官网
+中文文档
+
+二、FreeMarker的特性1、通用目标FreeMarker可以生成各种文件,，例如HTML、XML、RTF、JAVA源代码等等。
+FreeMarker易于嵌入到产品中：轻量级、不需要Servlet环境。
+FreeMarker可以从任何源载入模板。
+FreeMarker可以按需 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/03/14/Oracle%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Oracle数据库">     <img class="post_bg" src="/img/index_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Oracle数据库"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/03/14/Oracle%E6%95%B0%E6%8D%AE%E5%BA%93/" title="Oracle数据库">Oracle数据库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-14T12:09:13.000Z" title="发表于 2020-03-14 20:09:13">2020-03-14</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Oracle/">Oracle</a></span></div><div class="content">一、Oracle数据库简介Oracle Database，又名Oracle RDBMS，或简称Oracle。是甲骨文公司的一款关系数据库管理系统。它是在数据库领域一直处于领先地位的产品。可以说Oracle数据库系统是目前世界上流行的关系数据库管理系统，系统可移植性好、使用方便、功能强，适用于各类大、中、小、微机环境。它是一种高效率、可靠性好的、适应高吞吐量的数据库方案。
+二、了解数据库数据库（DataBase）是按照数据结构来组织、储存和管理数据的仓库。随着市场发展出现了各种的数据库，从最简单的储存有各种数据的表格到进行海量数据存储的大型数据库系统在各个方面得到了广泛的应用。数据库已经成为了数据管理的重要技术
+常用的数据库有：MySQL、Oracle、DB2等。数据库又分为小型、中型、大型数数据库
+
+
+
+分类
+产品
+特点
+
+
+
+小型
+access、foxbase
+负载小、用户大概100人以内；成本千元内、对安全性要求不高
+
+
+中型
+sqlServler、MySQL
+负载量、日访问量在5000-10000;成本在万元内，满足日常安全要求
+
+
+大型
+syBase、DB2、Oracle
+海量 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YANG</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Ys2025"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Ys2025" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/Asdzxc968" target="_blank" title="CSDN"><i class="fas fa-blog"></i></a><a class="social-icon" href="mailto:admin@yanghuisen.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/12/Nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E7%96%AF%E7%8B%82%E6%89%93%E5%8D%B0%E6%97%A5%E5%BF%97%E9%97%AE%E9%A2%98/" title="Nacos配置中心疯狂打印日志问题"><img src="/img/index_img4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nacos配置中心疯狂打印日志问题"/></a><div class="content"><a class="title" href="/2022/12/12/Nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E7%96%AF%E7%8B%82%E6%89%93%E5%8D%B0%E6%97%A5%E5%BF%97%E9%97%AE%E9%A2%98/" title="Nacos配置中心疯狂打印日志问题">Nacos配置中心疯狂打印日志问题</a><time datetime="2022-12-12T12:48:22.090Z" title="发表于 2022-12-12 20:48:22">2022-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/OracleHWM/" title="Oracle High Water Mark问题"><img src="/img/index_img5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Oracle High Water Mark问题"/></a><div class="content"><a class="title" href="/2022/12/11/OracleHWM/" title="Oracle High Water Mark问题">Oracle High Water Mark问题</a><time datetime="2022-12-11T08:07:04.000Z" title="发表于 2022-12-11 16:07:04">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/04/%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%BE%AE%E4%BF%A1%E5%8F%8C%E5%BC%80%E6%95%99%E7%A8%8B/" title="保姆级微信双开教程"><img src="/img/index_img1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="保姆级微信双开教程"/></a><div class="content"><a class="title" href="/2022/12/04/%E4%BF%9D%E5%A7%86%E7%BA%A7%E5%BE%AE%E4%BF%A1%E5%8F%8C%E5%BC%80%E6%95%99%E7%A8%8B/" title="保姆级微信双开教程">保姆级微信双开教程</a><time datetime="2022-12-03T17:37:00.000Z" title="发表于 2022-12-04 01:37:00">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/" title="使用XShell连接Vm虚拟机中安装的Centos"><img src="/img/index_img1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用XShell连接Vm虚拟机中安装的Centos"/></a><div class="content"><a class="title" href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84Centos/" title="使用XShell连接Vm虚拟机中安装的Centos">使用XShell连接Vm虚拟机中安装的Centos</a><time datetime="2021-12-25T07:59:38.000Z" title="发表于 2021-12-25 15:59:38">2021-12-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/" title="使用XShell连接Vm虚拟机中安装的UbuntuServer20.04"><img src="/img/index_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用XShell连接Vm虚拟机中安装的UbuntuServer20.04"/></a><div class="content"><a class="title" href="/2021/12/25/%E4%BD%BF%E7%94%A8XShell%E8%BF%9E%E6%8E%A5Vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85%E7%9A%84UbuntuServer20-04/" title="使用XShell连接Vm虚拟机中安装的UbuntuServer20.04">使用XShell连接Vm虚拟机中安装的UbuntuServer20.04</a><time datetime="2021-12-25T07:59:04.000Z" title="发表于 2021-12-25 15:59:04">2021-12-25</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Java/" style="font-size: 1.45em; color: rgb(119, 142, 17)">Java</a><a href="/tags/Gateway/" style="font-size: 1.15em; color: rgb(34, 109, 48)">Gateway</a><a href="/tags/Spring/" style="font-size: 1.15em; color: rgb(34, 50, 10)">Spring</a><a href="/tags/Nginx/" style="font-size: 1.15em; color: rgb(196, 149, 147)">Nginx</a><a href="/tags/Git/" style="font-size: 1.15em; color: rgb(124, 163, 20)">Git</a><a href="/tags/Nacos/" style="font-size: 1.22em; color: rgb(34, 17, 15)">Nacos</a><a href="/tags/oracle/" style="font-size: 1.15em; color: rgb(41, 2, 196)">oracle</a><a href="/tags/Redis/" style="font-size: 1.3em; color: rgb(195, 184, 68)">Redis</a><a href="/tags/SSH/" style="font-size: 1.22em; color: rgb(136, 76, 162)">SSH</a><a href="/tags/Spring-Cloud/" style="font-size: 1.38em; color: rgb(147, 120, 16)">Spring Cloud</a><a href="/tags/Ribbon/" style="font-size: 1.15em; color: rgb(153, 83, 95)">Ribbon</a><a href="/tags/Centos/" style="font-size: 1.15em; color: rgb(119, 118, 5)">Centos</a><a href="/tags/Xhsell/" style="font-size: 1.22em; color: rgb(156, 30, 107)">Xhsell</a><a href="/tags/Ubuntu/" style="font-size: 1.15em; color: rgb(48, 166, 26)">Ubuntu</a><a href="/tags/IOS/" style="font-size: 1.15em; color: rgb(126, 96, 8)">IOS</a><a href="/tags/Android/" style="font-size: 1.15em; color: rgb(194, 98, 104)">Android</a><a href="/tags/%E9%B8%BF%E8%92%99/" style="font-size: 1.15em; color: rgb(40, 155, 9)">鸿蒙</a><a href="/tags/Eureka/" style="font-size: 1.22em; color: rgb(22, 30, 64)">Eureka</a><a href="/tags/FreeMarker/" style="font-size: 1.15em; color: rgb(95, 74, 174)">FreeMarker</a><a href="/tags/Consul/" style="font-size: 1.15em; color: rgb(91, 86, 48)">Consul</a><a href="/tags/Feign/" style="font-size: 1.15em; color: rgb(37, 177, 87)">Feign</a><a href="/tags/MySql/" style="font-size: 1.15em; color: rgb(45, 162, 41)">MySql</a><a href="/tags/Oracle/" style="font-size: 1.15em; color: rgb(114, 165, 121)">Oracle</a><a href="/tags/Mybatis/" style="font-size: 1.15em; color: rgb(197, 178, 3)">Mybatis</a><a href="/tags/MybatisPlus/" style="font-size: 1.15em; color: rgb(194, 50, 130)">MybatisPlus</a><a href="/tags/RabbitMQ/" style="font-size: 1.15em; color: rgb(16, 185, 97)">RabbitMQ</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">27</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2017-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-12-12T12:48:50.323Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/index_img6.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2022 By YANG</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://www.yanghuisen.cn/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        var from = '出自 ' + data.from
+        var sub = "".length == 0 ? new Array() : "".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
