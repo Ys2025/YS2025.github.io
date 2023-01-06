@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Oracle问题记录</title>
+      <link href="/2023/01/06/Oracle%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+      <url>/2023/01/06/Oracle%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本贴用于记录开发中遇到的<code>OracleSQL</code>问题。</p></blockquote><h3 id="Null-值判断问题"><a href="#Null-值判断问题" class="headerlink" title="Null 值判断问题"></a>Null 值判断问题</h3><blockquote><p>问题场景: 获取字段A不等于‘1’的数据数量。(字段A，有可能为<code>null</code>)</p><p>结果发现<code>count</code>后的数量小于实际数量，后来发现是 <code>null 不参与 &lt;&gt; 比较</code>，需要对<code>null</code>做处理。</p></blockquote><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 错误</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="number">1</span>) <span class="keyword">from</span> table_name <span class="keyword">where</span> 字段A <span class="operator">&lt;&gt;</span> <span class="string">&#x27;1&#x27;</span>;</span><br><span class="line"><span class="comment">-- 正确</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="number">1</span>) <span class="keyword">from</span> table_name <span class="keyword">where</span> nvl(字段A,<span class="string">&#x27;0&#x27;</span>) <span class="operator">&lt;&gt;</span> <span class="string">&#x27;1&#x27;</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Oracle High Water Mark问题</title>
       <link href="/2022/12/11/OracleHWM/"/>
       <url>/2022/12/11/OracleHWM/</url>
@@ -14,7 +33,7 @@
       
         <tags>
             
-            <tag> oracle </tag>
+            <tag> Oracle </tag>
             
         </tags>
       
